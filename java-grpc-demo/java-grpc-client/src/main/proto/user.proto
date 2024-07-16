@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_package = "org.tianzun.api";
+option java_outer_classname = "UserProto";
+
+message LoginRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message LoginResponse {
+  bool success = 1;
+  string system = 2;
+  string token = 3;
+}
+
+service LoginService {
+  rpc login(LoginRequest) returns (LoginResponse){}
+}

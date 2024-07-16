@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: java-grpc-client
+server:
+  port: 8081
+grpc:
+  client:
+    java-grpc-server:
+      address: 'static://127.0.0.1:9000'
+      negotiation-type: plaintext
